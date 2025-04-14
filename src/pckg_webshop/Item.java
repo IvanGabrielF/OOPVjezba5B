@@ -1,27 +1,26 @@
 package pckg_webshop;
 
 public class Item {
-
     protected int quantity;
     protected float itemInitPrice;
     protected String itemDescription;
-    protected int itemID;
-    protected static int cntID = 10;
+    protected int itemId;
+
+    protected static int cntId = 10;
     protected float totalPrice;
 
 
     public Item(int quantity, String itemDescription){
-        this.quantity = quantity;
-        this.itemDescription =itemDescription;
+        this.quantity=quantity;
+        this.itemDescription=itemDescription;
 
 
     }
     public float getTotalPrice(){
-        return  totalPrice;
+        return totalPrice;
     }
-
     public void calculatePrice(){
-        totalPrice = quantity*itemInitPrice;
+        totalPrice=quantity*itemInitPrice;
     }
 
     @Override
@@ -30,7 +29,7 @@ public class Item {
                 "quantity=" + quantity +
                 ", itemInitPrice=" + itemInitPrice +
                 ", itemDescription='" + itemDescription + '\'' +
-                ", itemID=" + itemID +
+                ", itemId=" + itemId +
                 ", totalPrice=" + totalPrice +
                 '}';
     }

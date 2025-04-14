@@ -1,17 +1,18 @@
 package pckg_webshop;
 
 public class Customer {
-    private String address;
-    private int id;
+    private String adress;
+    private String name;
     private Payment payment;
 
-    public Customer(String address, int id, Payment payment){
-        this.address=address;
-        this.id=id;
+
+    public Customer(Payment payment, String name, String adress){
         this.payment=payment;
+        this.name=name;
+        this.adress=adress;
     }
-    public String getAddress(){
-        return address;
+    public String getAdress(){
+        return adress;
     }
     public Payment getPayment(){
         return payment;
@@ -20,9 +21,7 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "address='" + address + '\'' +
-                ", id=" + id +
-                ", payment=" + payment +
+                "name='" + name + '\'' +
                 '}';
     }
 }
